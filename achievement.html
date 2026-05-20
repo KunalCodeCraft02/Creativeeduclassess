@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>यशोगाथा विद्यार्थ्यांची - Creative Education Classes</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Hind:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3a6b;
+      --primary-dark: #0f2447;
+      --accent: #c8963e;
+      --accent2: #e8b45a;
+      --white: #ffffff;
+      --off-white: #f8f6f1;
+      --light-blue: #eef2f9;
+      --text: #1a1a2e;
+      --text-muted: #5a6075;
+      --border: #dde3f0;
+      --shadow: 0 4px 24px rgba(26, 58, 107, 0.10);
+      --shadow-hover: 0 8px 40px rgba(26, 58, 107, 0.18);
+      --radius: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hind', 'Tiro Devanagari Marathi', serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--off-white); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+    /* ══════════════════════════════
+       TOP BAR
+    ══════════════════════════════ */
+    .topbar {
+      background: var(--primary);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 0.8rem;
+      font-family: 'Hind', sans-serif;
+    }
+    .topbar span { margin: 0 10px; }
+
+    /* ══════════════════════════════
+       NAVBAR
+    ══════════════════════════════ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 0 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 46px;
+      height: 46px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 2px 10px rgba(26,58,107,0.20);
+    }
+    .nav-logo-text .brand {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1rem;
+      color: var(--primary);
+      display: block;
+    }
+    .nav-logo-text .sub {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 3px;
+      transition: color 0.2s;
+      font-family: 'Hind', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--primary); font-weight: 700; }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta {
+      background: var(--primary) !important;
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+      border-radius: 6px !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: 0.3s;
+      display: block;
+    }
+
+    /* mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 999;
+      padding: 80px 6% 40px;
+      flex-direction: column;
+    }
+    .mobile-menu.active { display: flex; }
+    .mobile-close {
+      position: absolute;
+      top: 18px; right: 18px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--primary);
+      background: none;
+      border: none;
+      padding: 10px;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-family: 'Hind', sans-serif;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      display: block;
+      cursor: pointer;
+    }
+
+    /* ══════════════════════════════
+       ANNOUNCEMENT BAR
+    ══════════════════════════════ */
+    .announcement {
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+      background-size: 200%;
+      animation: shimmer 3s linear infinite;
+      padding: 9px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 0% }
+      100% { background-position: 200% }
+    }
+    .announcement-inner {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+      font-family: 'Hind', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+      padding: 0 60px;
+    }
+    @keyframes marquee {
+      from { transform: translateX(100vw) }
+      to   { transform: translateX(-100%) }
+    }
+
+    /* ══════════════════════════════
+       PAGE HERO BANNER
+    ══════════════════════════════ */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #1a3a6b 100%);
+      color: var(--white);
+      padding: 60px 4%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(200,150,62,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    }
+    .page-hero-content { position: relative; z-index: 1; }
+    .page-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,150,62,0.2);
+      border: 1px solid rgba(200,150,62,0.4);
+      color: var(--accent2);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+      font-family: 'Hind', sans-serif;
+    }
+    .page-hero h1 {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .page-hero h1 .highlight { color: var(--accent2); }
+    .page-hero p {
+      font-size: 1rem;
+      opacity: 0.82;
+      max-width: 560px;
+      margin: 0 auto;
+      font-family: 'Hind', sans-serif;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 0.82rem;
+      opacity: 0.75;
+      font-family: 'Hind', sans-serif;
+    }
+    .breadcrumb a { color: var(--accent2); text-decoration: none; }
+    .breadcrumb span { opacity: 0.6; }
+
+    /* ══════════════════════════════
+       ACHIEVEMENTS SECTION
+    ══════════════════════════════ */
+    #achievements {
+      padding: 76px 4%;
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+    }
+    #achievements::before, #achievements::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    #achievements::before {
+      width: 480px; height: 480px;
+      top: -180px; right: -120px;
+      background: radial-gradient(circle, rgba(26,58,107,0.06) 0%, transparent 70%);
+    }
+    #achievements::after {
+      width: 340px; height: 340px;
+      bottom: -120px; left: -80px;
+      background: radial-gradient(circle, rgba(200,150,62,0.08) 0%, transparent 70%);
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-tag {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--primary);
+      padding: 5px 16px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-family: 'Hind', sans-serif;
+    }
+    .section-title {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--primary);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .section-title .highlight { color: var(--accent); }
+    .section-divider {
+      width: 56px; height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      margin: 0 auto 14px;
+      border-radius: 2px;
+    }
+    .section-desc {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: 'Hind', sans-serif;
+    }
+
+    /* GRID */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .achievement-card.featured { grid-column: span 2; }
+
+    /* CARD */
+    .achievement-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.35s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .achievement-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+    .achievement-card:nth-child(1)  { animation-delay: 0.05s; }
+    .achievement-card:nth-child(2)  { animation-delay: 0.12s; }
+    .achievement-card:nth-child(3)  { animation-delay: 0.19s; }
+    .achievement-card:nth-child(4)  { animation-delay: 0.26s; }
+    .achievement-card:nth-child(5)  { animation-delay: 0.33s; }
+    .achievement-card:nth-child(6)  { animation-delay: 0.40s; }
+    .achievement-card:nth-child(7)  { animation-delay: 0.47s; }
+    .achievement-card:nth-child(8)  { animation-delay: 0.54s; }
+    .achievement-card:nth-child(9)  { animation-delay: 0.61s; }
+    .achievement-card:nth-child(10) { animation-delay: 0.68s; }
+    .achievement-card:nth-child(11) { animation-delay: 0.75s; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-body {
+      padding: 28px 26px 22px;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      flex: 1;
+    }
+    .student-photo {
+      width: 110px; height: 110px; min-width: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--light-blue), #dde3f0);
+      border: 4px solid var(--border);
+      box-shadow: 0 6px 20px rgba(26,58,107,0.14);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .achievement-card.featured .student-photo {
+      width: 140px; height: 140px; min-width: 140px;
+    }
+    .student-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .student-info { flex: 1; min-width: 0; }
+    .student-batch {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--primary);
+      padding: 3px 11px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      margin-bottom: 7px;
+      font-family: 'Hind', sans-serif;
+    }
+    .student-name {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 3px;
+      line-height: 1.3;
+    }
+    .achievement-card.featured .student-name { font-size: 1.5rem; }
+    .student-edu {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'Hind', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+    }
+    .achievement-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(135deg, var(--primary), #2a5298);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: 'Hind', sans-serif;
+      margin-bottom: 14px;
+    }
+    .achievement-pill .pill-icon { font-size: 0.9rem; }
+    .company-strip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--light-blue);
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .company-logo-box {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .company-name {
+      font-family: 'Hind', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .company-tagline {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-family: 'Hind', sans-serif;
+    }
+    .quote-block {
+      padding: 18px 22px;
+      background: linear-gradient(135deg, var(--light-blue), #f0f4fc);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      margin: 0 26px 22px;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '\201C';
+      position: absolute;
+      top: 6px; left: 14px;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.35;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-text {
+      font-family: 'Hind', sans-serif;
+      font-size: 0.87rem;
+      color: var(--text);
+      line-height: 1.65;
+      padding-left: 10px;
+    }
+    .quote-text .kw      { color: var(--accent); font-weight: 600; }
+    .quote-text .kw-blue { color: var(--primary); font-weight: 600; }
+    .quote-sign {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-align: right;
+      padding: 0 26px 20px;
+    }
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 0 26px 24px;
+    }
+    .skill-tag {
+      background: var(--primary);
+      color: var(--white);
+      padding: 4px 11px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      font-family: 'Hind', sans-serif;
+      letter-spacing: 0.3px;
+    }
+    .card-footer {
+      background: linear-gradient(90deg, var(--primary), #2a5298);
+      padding: 11px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .footer-icons { display: flex; gap: 16px; }
+    .footer-icon-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.72rem;
+      font-family: 'Hind', sans-serif;
+    }
+    .footer-icon-item span { font-size: 0.85rem; }
+    .footer-batch-tag {
+      background: rgba(200,150,62,0.25);
+      border: 1px solid var(--accent2);
+      color: var(--accent2);
+      padding: 3px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Hind', sans-serif;
+    }
+
+    /* STATS */
+    .section-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .stat-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+    .stat-box:hover { transform: translateY(-3px); }
+    .stat-box .stat-icon { font-size: 1.7rem; margin-bottom: 8px; display: block; }
+    .stat-box .stat-num {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 2.1rem;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+    }
+    .stat-box .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'Hind', sans-serif;
+      margin-top: 4px;
+    }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 56px 4% 0;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+    .footer-brand .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-icon {
+      width: 46px; height: 46px;
+      background: rgba(200,150,62,0.2);
+      border: 1px solid rgba(200,150,62,0.4);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .footer-logo-text .brand {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1rem;
+      color: var(--white);
+      display: block;
+    }
+    .footer-logo-text .sub {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.55);
+      display: block;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.60);
+      font-family: 'Hind', sans-serif;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      font-family: 'Hind', sans-serif;
+      color: rgba(255,255,255,0.75);
+    }
+    .footer-contact-item .icon {
+      width: 32px; height: 32px;
+      background: rgba(200,150,62,0.15);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .footer-col h4 {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.60);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-family: 'Hind', sans-serif;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-col ul li a:hover { color: var(--accent2); }
+    .footer-col ul li a::before {
+      content: '›';
+      color: var(--accent);
+      font-size: 1rem;
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      font-family: 'Hind', sans-serif;
+    }
+    .footer-bottom-links {
+      display: flex;
+      gap: 18px;
+    }
+    .footer-bottom-links a {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.78rem;
+      text-decoration: none;
+      font-family: 'Hind', sans-serif;
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--accent2); }
+
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media (max-width: 1000px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .achievements-grid { grid-template-columns: 1fr 1fr; }
+      .achievement-card.featured { grid-column: span 2; }
+      .section-stats { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .achievements-grid { grid-template-columns: 1fr; }
+      .achievement-card.featured { grid-column: span 1; }
+      .card-body { flex-direction: column; align-items: center; text-align: center; }
+      .student-info { text-align: center; }
+      .achievement-pill { justify-content: center; }
+      .company-strip { justify-content: center; }
+      .section-stats { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .topbar { font-size: 0.72rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ TOP BAR ══ -->
+  <div class="topbar">
+    <span>📍 चिखली, जि. बुलढाणा</span>
+    <span>|</span>
+    <span>📞 9767977510</span>
+    <span>|</span>
+    <span>🕐 सोम – शनि : सकाळी ७ ते रात्री ९</span>
+  </div>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">📚</div>
+      <div class="nav-logo-text">
+        <span class="brand">क्रिएटीव्ह एज्युकेशन</span>
+        <span class="sub">चिखली, जि. बुलढाणा</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">मुख्यपृष्ठ</a></li>
+      <li><a href="index.html#about">आमच्याबद्दल</a></li>
+      <li><a href="index.html#teachers">शिक्षक</a></li>
+      <!-- <li><a href="index.html#courses">अभ्यासक्रम</a></li> -->
+      <li><a href="achievements.html" class="active">यशोगाथा</a></li>
+      <li><a href="index.html#contact" class="nav-cta">प्रवेश घ्या</a></li>
+    </ul>
+
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('active')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ MOBILE MENU ══ -->
+  <div class="mobile-menu">
+    <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('active')">✕</button>
+    <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">🏠 मुख्यपृष्ठ</a>
+    <a href="index.html#about" onclick="document.querySelector('.mobile-menu').classList.remove('active')">ℹ️ आमच्याबद्दल</a>
+    <a href="index.html#teachers" onclick="document.querySelector('.mobile-menu').classList.remove('active')">👨‍🏫 शिक्षक</a>
+    <a href="index.html#courses" onclick="document.querySelector('.mobile-menu').classList.remove('active')">📖 अभ्यासक्रम</a>
+    <a href="achievements.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">🏆 यशोगाथा</a>
+    <a href="index.html#contact" onclick="document.querySelector('.mobile-menu').classList.remove('active')">✍️ प्रवेश घ्या</a>
+  </div>
+
+  <!-- ══ ANNOUNCEMENT ══ -->
+  <div class="announcement">
+    <span class="announcement-inner">
+      🎉 नवीन बॅच सुरू होत आहे! &nbsp;|&nbsp; 📞 प्रवेशासाठी संपर्क: 9767977510 &nbsp;|&nbsp;
+      🏆 आमच्या विद्यार्थ्यांनी IIT, BAMS, Police, Banking मध्ये यश मिळवले! &nbsp;|&nbsp;
+      ✅ वर्ग ५ वी ते १० वी (विज्ञान) &nbsp;|&nbsp; 📍 चिखली, जि. बुलढाणा &nbsp;|&nbsp;
+      🎉 नवीन बॅच सुरू होत आहे! &nbsp;|&nbsp; 📞 9767977510
+    </span>
+  </div>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-tag">✦ विद्यार्थी यश ✦</div>
+      <h1>यशोगाथा <span class="highlight">विद्यार्थ्यांची</span></h1>
+      <p>क्रिएटीव्ह एज्युकेशन क्लासेसच्या विद्यार्थ्यांनी आपल्या मेहनत आणि कौशल्याने उज्ज्वल भविष्य घडवले.</p>
+      <div class="breadcrumb">
+        <a href="index.html">मुख्यपृष्ठ</a>
+        <span>›</span>
+        <span>यशोगाथा विद्यार्थ्यांची</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ACHIEVEMENTS SECTION ══ -->
+  <section id="achievements">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">✦ विद्यार्थी यश ✦</span>
+        <h2 class="section-title">यशोगाथा <span class="highlight">विद्यार्थ्यांची</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+          क्रिएटीव्ह एज्युकेशन क्लासेसच्या विद्यार्थ्यांनी आपल्या मेहनत आणि कौशल्याने
+          उज्ज्वल भविष्य घडवले. त्यांच्याच शब्दांत त्यांची यशोगाथा…
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+
+        <!-- ══ CARD 1 — FEATURED: यश करपे ══ -->
+        <div class="achievement-card featured">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377739.jpg" alt="यश करपे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">Batch २०२१ &nbsp;|&nbsp; ⭐ Featured</span>
+              <div class="student-name">यश करपे</div>
+              <div class="student-edu">3rd Year · Electrical Engineering</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🏢</span>
+                Founder &amp; CEO · Revonix Technologies Pvt. Ltd.
+              </div>
+              <div class="company-strip">
+                <div class="company-logo-box">⚡</div>
+                <div>
+                  <div class="company-name">REVONIX TECHNOLOGIES PVT. LTD.</div>
+                  <div class="company-tagline">Energy Storage Systems &amp; Technologies</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              तुम्ही आम्हाला फक्त <span class="kw">syllabus</span> शिकवला नाही, तर
+              खऱ्या आयुष्यात उपयोगी पडणाऱ्या गोष्टी शिकवल्या. तुम्ही नेहमी
+              <span class="kw">practical learning</span> वर भर दिलात,
+              <span class="kw-blue">projects</span> बनवायला प्रोत्साहन दिलं,
+              आणि स्वतः काहीतरी निर्माण करण्याची सवय लावली.
+              आज आम्ही ज्या मार्गावर आहोत, त्यामागे तुमचं खूप मोठं योगदान आहे.
+            </p>
+          </div>
+          <div class="quote-sign">— धन्यवाद सर 🙏 &nbsp; यश करपे</div>
+          <div class="skills-row">
+            <span class="skill-tag">Practical Learning</span>
+            <span class="skill-tag">Entrepreneurship</span>
+            <span class="skill-tag">Energy Storage</span>
+            <span class="skill-tag">Innovation</span>
+            <span class="skill-tag">Project Based</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>💡</span> Practical Learning</div>
+              <div class="footer-icon-item"><span>⚙️</span> Project Based</div>
+              <div class="footer-icon-item"><span>🚀</span> Innovation &amp; Creation</div>
+            </div>
+            <span class="footer-batch-tag">Batch २०२१</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 2: प्रज्वल आसबे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377740.jpg" alt="प्रज्वल आसबे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ IIT Achievement</span>
+              <div class="student-name">प्रज्वल आसबे</div>
+              <div class="student-edu">B.Tech · IIT Guwahati</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🎓</span>
+                B.Tech · IIT Guwahati
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              क्रिएटीव्ह एज्युकेशन क्लासेसच्या
+              <span class="kw-blue">गुणवत्तापूर्ण शिक्षण</span> आणि
+              <span class="kw">अनुभवी मार्गदर्शन</span> यामुळे
+              IIT Guwahati मध्ये प्रवेश मिळवणे शक्य झाले.
+              सरांच्या मार्गदर्शनाने यशाची हमखास तयारी झाली.
+            </p>
+          </div>
+          <div class="quote-sign">— प्रज्वल आसबे</div>
+          <div class="skills-row">
+            <span class="skill-tag">IIT Entrance</span>
+            <span class="skill-tag">Science</span>
+            <span class="skill-tag">Engineering</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>🏛️</span> IIT Guwahati</div>
+              <div class="footer-icon-item"><span>🏆</span> Excellence</div>
+            </div>
+            <span class="footer-batch-tag">B.Tech IIT</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 3: प्रथमेश कापसे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377735.jpg" alt="प्रथमेश कापसे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Entrepreneur</span>
+              <div class="student-name">प्रथमेश कापसे</div>
+              <div class="student-edu">Founder &amp; CEO</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🏢</span>
+                Founder &amp; CEO · Mauli Web Systems Pvt. Ltd.
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              Creative Education मधील आदरणीय <span class="kw-blue">Krushna Deshmukh Sir</span> यांच्याबद्दल
+              मनापासून कृतज्ञता व्यक्त करावीशी वाटते. त्यांच्या मार्गदर्शनाखाली शिकण्याची संधी
+              मिळाली आणि हाच माझ्या आयुष्यातील एक महत्वाचा <span class="kw">turning point</span> ठरला.
+            </p>
+          </div>
+          <div class="quote-sign">— Prathamesh Santosh Kapse</div>
+          <div class="skills-row">
+            <span class="skill-tag">Web Systems</span>
+            <span class="skill-tag">Entrepreneurship</span>
+            <span class="skill-tag">Science</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>💻</span> Web Systems</div>
+              <div class="footer-icon-item"><span>🚀</span> Startup</div>
+            </div>
+            <span class="footer-batch-tag">Founder & CEO</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 4: गणेश काळे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377741.jpg" alt="गणेश काळे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Medical</span>
+              <div class="student-name">गणेश काळे</div>
+              <div class="student-edu">BAMS 1st Year · Raigarh</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🏥</span>
+                BAMS 1st Year · Raigarh
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              <span class="kw-blue">अनुभवी व गुणवंत शिक्षकवर्ग</span>,
+              सखोल अभ्यास व वैयक्तिक लक्ष,
+              नियमित <span class="kw">टेस्ट व परीक्षा मार्गदर्शन</span> —
+              यामुळेच BAMS प्रवेश मिळवणे शक्य झाले.
+              यशाची हमी — आमची वचनबद्धता!
+            </p>
+          </div>
+          <div class="quote-sign">— गणेश काळे</div>
+          <div class="skills-row">
+            <span class="skill-tag">BAMS</span>
+            <span class="skill-tag">Medical</span>
+            <span class="skill-tag">Ayurveda</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>🏥</span> Medical</div>
+              <div class="footer-icon-item"><span>📚</span> BAMS</div>
+            </div>
+            <span class="footer-batch-tag">Raigarh</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 5: कल्याणी गायकी ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377734.jpg" alt="कल्याणी गायकी">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Agriculture</span>
+              <div class="student-name">कल्याणी गायकी</div>
+              <div class="student-edu">B.Sc (Hons) Agriculture</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🌾</span>
+                B.Sc (Hons) Agriculture
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              <span class="kw-blue">सशक्त मार्गदर्शन</span>, योग्य अभ्यासपद्धती
+              आणि विद्यार्थ्यांच्या <span class="kw">उज्ज्वल भविष्याची</span> हमी —
+              यामुळेच Agriculture मध्ये यश संपादन करणे शक्य झाले.
+              सरांचे आभार!
+            </p>
+          </div>
+          <div class="quote-sign">— कल्याणी गायकी</div>
+          <div class="skills-row">
+            <span class="skill-tag">Agriculture</span>
+            <span class="skill-tag">B.Sc Hons</span>
+            <span class="skill-tag">Science</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>🌾</span> Agriculture</div>
+              <div class="footer-icon-item"><span>🎓</span> B.Sc Hons</div>
+            </div>
+            <span class="footer-batch-tag">Agriculture</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 6: प्रगती कणसे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377743.jpg" alt="प्रगती कणसे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Law &amp; Finance</span>
+              <div class="student-name">प्रगती कणसे</div>
+              <div class="student-edu">CS (Company Secretary) with LLB</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">⚖️</span>
+                CS (Company Secretary) with LLB
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              तुझ्या यशाचा आम्हाला <span class="kw-blue">अभिमान</span> आहे.
+              उज्ज्वल भविष्यासाठी हार्दिक शुभेच्छा!
+              <span class="kw">मनःपूर्वक अभिनंदन!</span>
+            </p>
+          </div>
+          <div class="quote-sign">— प्रगती कणसे</div>
+          <div class="skills-row">
+            <span class="skill-tag">Company Secretary</span>
+            <span class="skill-tag">LLB</span>
+            <span class="skill-tag">Law</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>⚖️</span> Law</div>
+              <div class="footer-icon-item"><span>🏢</span> CS</div>
+            </div>
+            <span class="footer-batch-tag">CS + LLB</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 7: महेश मेहेत्रे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377738.jpg" alt="महेश मेहेत्रे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Police Service</span>
+              <div class="student-name">महेश मेहेत्रे</div>
+              <div class="student-edu">Maharashtra Police</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">👮</span>
+                महाराष्ट्र पोलीस
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              <span class="kw">मेहनत, जिद्द</span> आणि योग्य मार्गदर्शन यामुळेच
+              मिळाले हे यश! <span class="kw-blue">महेशच्या पुढील वाटचालीस</span>
+              हार्दिक शुभेच्छा!
+            </p>
+          </div>
+          <div class="quote-sign">— महेश मेहेत्रे</div>
+          <div class="skills-row">
+            <span class="skill-tag">Maharashtra Police</span>
+            <span class="skill-tag">Discipline</span>
+            <span class="skill-tag">Service</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>👮</span> Police</div>
+              <div class="footer-icon-item"><span>🌟</span> Service</div>
+            </div>
+            <span class="footer-batch-tag">Maharashtra Police</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 8: अक्षय वानखवेडे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377736.jpg" alt="अक्षय वानखवेडे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Govt. Service</span>
+              <div class="student-name">अक्षय वानखवेडे</div>
+              <div class="student-edu">सांख्यिकी सहाय्यक · जिल्हा रुग्णालय, वाशिम</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🏛️</span>
+                सांख्यिकी सहाय्यक · जिल्हा रुग्णालय, वाशिम
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              नमस्कार सर, <span class="kw-blue">आपल्या मार्गदर्शनामुळे</span>
+              आज आम्ही यशाच्या <span class="kw">शिखरावर</span> पोहोचत आहोत.
+              आपले आभार!
+            </p>
+          </div>
+          <div class="quote-sign">— अक्षय वानखवेडे</div>
+          <div class="skills-row">
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Govt. Service</span>
+            <span class="skill-tag">Healthcare</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>📊</span> Statistics</div>
+              <div class="footer-icon-item"><span>🏥</span> Hospital</div>
+            </div>
+            <span class="footer-batch-tag">Washim</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 9: सानिका डहाके ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377737.jpg" alt="सानिका डहाके">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Engineering</span>
+              <div class="student-name">सानिका डहाके</div>
+              <div class="student-edu">Computer Science &amp; Engineering (PLIT)</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">💻</span>
+                Computer Science &amp; Engineering · PLIT
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              <span class="kw-blue">आमचा अभिमान, आमची प्रेरणा</span> —
+              घडवतोय आम्ही उज्ज्वल भविष्य!
+              <span class="kw">अनुभवी शिक्षकवर्ग</span>, दर्जेदार मार्गदर्शन
+              आणि यशाची हमी.
+            </p>
+          </div>
+          <div class="quote-sign">— सानिका डहाके</div>
+          <div class="skills-row">
+            <span class="skill-tag">Computer Science</span>
+            <span class="skill-tag">Engineering</span>
+            <span class="skill-tag">PLIT</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>💻</span> CS&amp;E</div>
+              <div class="footer-icon-item"><span>🎓</span> PLIT</div>
+            </div>
+            <span class="footer-batch-tag">Engineering</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 10: किरण जाधव ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377742.jpg" alt="किरण जाधव">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Govt. Service</span>
+              <div class="student-name">किरण जाधव</div>
+              <div class="student-edu">Branch Post Master · India Post</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">📮</span>
+                Branch Post Master · Post Office Shara Lonar
+              </div>
+              <div class="company-strip">
+                <div class="company-logo-box">📮</div>
+                <div>
+                  <div class="company-name">INDIA POST</div>
+                  <div class="company-tagline">Post Office Shara Lonar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              नमस्कार सर, <span class="kw">कष्ट, चिकाटी</span> आणि
+              <span class="kw-blue">योग्य मार्गदर्शनाचे</span> फलित!
+              गुणवत्तापूर्ण शिक्षण आणि उज्ज्वल भविष्याची हमी.
+            </p>
+          </div>
+          <div class="quote-sign">— किरण जाधव</div>
+          <div class="skills-row">
+            <span class="skill-tag">India Post</span>
+            <span class="skill-tag">Govt. Service</span>
+            <span class="skill-tag">Administration</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>📮</span> India Post</div>
+              <div class="footer-icon-item"><span>🌟</span> Post Master</div>
+            </div>
+            <span class="footer-batch-tag">India Post</span>
+          </div>
+        </div>
+
+        <!-- ══ CARD 11: मंगेश मेहेत्रे ══ -->
+        <div class="achievement-card">
+          <div class="card-body">
+            <div class="student-photo">
+              <img src="1000377744.jpg" alt="मंगेश मेहेत्रे">
+            </div>
+            <div class="student-info">
+              <span class="student-batch">⭐ Banking</span>
+              <div class="student-name">मंगेश मेहेत्रे</div>
+              <div class="student-edu">Assistant Manager · ICICI Bank, Mumbai</div>
+              <div class="achievement-pill">
+                <span class="pill-icon">🏦</span>
+                Assistant Manager · ICICI Bank, Mumbai
+              </div>
+              <div class="company-strip">
+                <div class="company-logo-box">🏦</div>
+                <div>
+                  <div class="company-name">ICICI BANK</div>
+                  <div class="company-tagline">Mumbai Branch</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-block">
+            <p class="quote-text">
+              <span class="kw-blue">गुणवत्ता मार्गदर्शन</span> आणि
+              <span class="kw">यशाची हमी!</span>
+              चिखली जि. बुलढाणा येथून ICICI Bank मध्ये
+              Assistant Manager पदापर्यंत पोहोचणे हे सरांच्या मार्गदर्शनाने शक्य झाले.
+            </p>
+          </div>
+          <div class="quote-sign">— मंगेश मेहेत्रे</div>
+          <div class="skills-row">
+            <span class="skill-tag">Banking</span>
+            <span class="skill-tag">ICICI Bank</span>
+            <span class="skill-tag">Management</span>
+          </div>
+          <div class="card-footer">
+            <div class="footer-icons">
+              <div class="footer-icon-item"><span>🏦</span> ICICI Bank</div>
+              <div class="footer-icon-item"><span>💼</span> Manager</div>
+            </div>
+            <span class="footer-batch-tag">Mumbai</span>
+          </div>
+        </div>
+
+      </div><!-- /achievements-grid -->
+
+      <!-- Stats Bar -->
+      <div class="section-stats">
+        <div class="stat-box">
+          <span class="stat-icon">🎓</span>
+          <span class="stat-num">११+</span>
+          <div class="stat-label">यशस्वी विद्यार्थी</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon">🏛️</span>
+          <span class="stat-num">IIT</span>
+          <div class="stat-label">प्रतिष्ठित संस्थांमध्ये प्रवेश</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon">💼</span>
+          <span class="stat-num">५+</span>
+          <div class="stat-label">उद्योग क्षेत्रे</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon">🚀</span>
+          <span class="stat-num">२+</span>
+          <div class="stat-label">Startups / Companies</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">📚</div>
+          <div class="footer-logo-text">
+            <span class="brand">क्रिएटीव्ह एज्युकेशन क्लासेस</span>
+            <span class="sub">चिखली, जि. बुलढाणा</span>
+          </div>
+        </div>
+        <p>
+          प्रा. कृष्णराव देशमुख सरांचे क्रिएटीव्ह एज्युकेशन क्लासेस —
+          विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी समर्पित. वर्ग ५ वी ते १० वी (विज्ञान).
+        </p>
+        <div class="footer-contact-item">
+          <div class="icon">📞</div>
+          <span>9767977510</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon">📍</div>
+          <span>चिखली, जि. बुलढाणा, महाराष्ट्र</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon">🕐</div>
+          <span>सोमवार – शनिवार : सकाळी ७ ते रात्री ९</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>द्रुत दुवे</h4>
+        <ul>
+          <li><a href="index.html">मुख्यपृष्ठ</a></li>
+          <li><a href="index.html#about">आमच्याबद्दल</a></li>
+          <li><a href="index.html#teachers">शिक्षक</a></li>
+          <li><a href="index.html#courses">अभ्यासक्रम</a></li>
+          <li><a href="achievements.html">यशोगाथा</a></li>
+          <li><a href="index.html#contact">संपर्क</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses -->
+      <div class="footer-col">
+        <h4>अभ्यासक्रम</h4>
+        <ul>
+          <li><a href="#">वर्ग ५ वी – विज्ञान</a></li>
+          <li><a href="#">वर्ग ६ वी – विज्ञान</a></li>
+          <li><a href="#">वर्ग ७ वी – विज्ञान</a></li>
+          <li><a href="#">वर्ग ८ वी – विज्ञान</a></li>
+          <li><a href="#">वर्ग ९ वी – विज्ञान</a></li>
+          <li><a href="#">वर्ग १० वी – विज्ञान</a></li>
+        </ul>
+      </div>
+
+      <!-- Achievements -->
+      <div class="footer-col">
+        <h4>यशस्वी विद्यार्थी</h4>
+        <ul>
+          <li><a href="#">IIT Guwahati — प्रज्वल आसबे</a></li>
+          <li><a href="#">Revonix Technologies — यश करपे</a></li>
+          <li><a href="#">Maharashtra Police — महेश मेहेत्रे</a></li>
+          <li><a href="#">ICICI Bank — मंगेश मेहेत्रे</a></li>
+          <li><a href="#">India Post — किरण जाधव</a></li>
+          <li><a href="#">BAMS — गणेश काळे</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 क्रिएटीव्ह एज्युकेशन क्लासेस, चिखली. सर्व हक्क राखीव.</p>
+      <div class="footer-bottom-links">
+        <a href="#">गोपनीयता धोरण</a>
+        <a href="#">अटी व शर्ती</a>
+        <a href="index.html#contact">संपर्क</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
