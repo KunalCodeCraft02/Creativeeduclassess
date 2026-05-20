@@ -56,7 +56,6 @@
       border-radius: 3px;
     }
 
-    /* PAGE SYSTEM */
     .page {
       display: none;
     }
@@ -69,7 +68,6 @@
       display: block;
     }
 
-    /* TOP BAR */
     .topbar {
       background: var(--primary);
       color: rgba(255, 255, 255, 0.85);
@@ -83,7 +81,6 @@
       margin: 0 10px;
     }
 
-    /* NAVBAR */
     nav {
       position: sticky;
       top: 0;
@@ -240,7 +237,6 @@
       cursor: pointer;
     }
 
-    /* ANNOUNCEMENT */
     .announcement {
       background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
       background-size: 200%;
@@ -280,7 +276,6 @@
       }
     }
 
-    /* HERO */
     .hero {
       position: relative;
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #1a3a6b 100%);
@@ -294,9 +289,7 @@
     .hero-pattern {
       position: absolute;
       inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 80%, rgba(200, 150, 62, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      background-image: radial-gradient(circle at 20% 80%, rgba(200, 150, 62, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     }
 
     .hero-circles {
@@ -552,7 +545,6 @@
       font-family: 'Hind', sans-serif;
     }
 
-    /* COMMON SECTION */
     section {
       padding: 76px 4%;
     }
@@ -605,7 +597,6 @@
       font-family: 'Hind', sans-serif;
     }
 
-    /* ABOUT */
     #about {
       background: var(--off-white);
     }
@@ -771,7 +762,6 @@
       margin-top: 2px;
     }
 
-    /* TEACHERS */
     #teachers {
       background: var(--white);
     }
@@ -829,13 +819,6 @@
 
     .teacher-photo-wrap {
       display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .teacher-photo-wrap {
-      display: flex;
       align-items: flex-start;
       gap: 22px;
       margin-bottom: 20px;
@@ -844,69 +827,39 @@
     .teacher-photo {
       width: 150px;
       height: 150px;
-
       border-radius: 50%;
-
-      background: linear-gradient(135deg,
-          var(--light-blue),
-          #dde3f0);
-
+      background: linear-gradient(135deg, var(--light-blue), #dde3f0);
       display: flex;
       align-items: center;
       justify-content: center;
-
       overflow: hidden;
-
       flex-shrink: 0;
-
       border: 4px solid var(--border);
-
-      box-shadow:
-        0 8px 24px rgba(26,
-          58,
-          107,
-          0.16);
-
+      box-shadow: 0 8px 24px rgba(26, 58, 107, 0.16);
       color: var(--text-muted);
-
       text-align: center;
-
       font-size: .7rem;
-
       line-height: 1.4;
-
       padding: 0;
     }
-
-    /* Main teacher images */
 
     .teacher-photo img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
-
       object-position: center top;
-
       display: block;
-
       transform: scale(1.05);
     }
-
-    /* Guest lecturers */
 
     .teacher-photo.guest {
       width: 95px;
       height: 95px;
     }
 
-    /* Guest image fit */
-
     .teacher-photo.guest img {
       object-fit: cover;
-
       object-position: center top;
-
       transform: scale(1.08);
     }
 
@@ -986,15 +939,6 @@
       font-family: 'Hind', sans-serif;
     }
 
-    .photo-placeholder-note {
-      font-size: 0.68rem;
-      color: #aaa;
-      margin-top: 4px;
-      font-family: 'Hind', sans-serif;
-      font-style: italic;
-    }
-
-    /* CLASSES */
     #classes {
       background: var(--off-white);
     }
@@ -1149,7 +1093,6 @@
       font-family: 'Hind', sans-serif;
     }
 
-    /* ACHIEVEMENTS */
     #achievements {
       background: var(--white);
     }
@@ -1223,7 +1166,6 @@
       font-family: 'Hind', sans-serif
     }
 
-    /* VISION */
     #vision {
       background: var(--primary);
       color: var(--white)
@@ -1288,7 +1230,6 @@
       opacity: 0.9
     }
 
-    /* CONTACT */
     #contact {
       background: var(--off-white)
     }
@@ -1421,7 +1362,6 @@
       background: var(--accent)
     }
 
-    /* MAP */
     .map-section {
       background: var(--white);
       border-top: 1px solid var(--border)
@@ -1468,7 +1408,6 @@
       font-family: 'Hind', sans-serif
     }
 
-    /* FOOTER */
     footer {
       background: var(--primary);
       color: rgba(255, 255, 255, 0.85);
@@ -1559,7 +1498,6 @@
       gap: 9px
     }
 
-    /* INNER PAGES */
     .inner-page {
       min-height: 100vh
     }
@@ -1603,7 +1541,6 @@
       background: rgba(255, 255, 255, 0.22)
     }
 
-    /* GALLERY PAGE */
     .gallery-page-content {
       padding: 56px 4%
     }
@@ -1716,7 +1653,6 @@
       font-size: 0.88rem
     }
 
-    /* RESULT PAGE */
     .result-page-content {
       padding: 56px 4%
     }
@@ -1841,7 +1777,6 @@
       font-size: 0.88rem
     }
 
-    /* STUDENT ACHIEVEMENT PAGE */
     .achievement-page-content {
       padding: 56px 4%
     }
@@ -1972,7 +1907,6 @@
       font-size: 0.88rem
     }
 
-    /* FADE UP */
     .fade-up {
       opacity: 0;
       transform: translateY(28px);
@@ -1984,7 +1918,6 @@
       transform: translateY(0)
     }
 
-    /* INNER PAGE SHARED NAV */
     .inner-nav {
       position: sticky;
       top: 0;
@@ -1999,7 +1932,166 @@
       height: 70px
     }
 
-    /* RESPONSIVE */
+    /* ITO Award Photos */
+    .ito-award-photos {
+      margin-top: 70px;
+    }
+
+    .ito-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .ito-tag {
+      display: inline-block;
+      padding: 8px 18px;
+      background: #eef2ff;
+      color: #1a3a6b;
+      border-radius: 100px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .ito-header h3 {
+      font-size: 30px;
+      color: #1a3a6b;
+      margin-bottom: 8px;
+    }
+
+    .ito-header p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .ito-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 30px;
+
+      align-items: stretch;
+
+    }
+
+    .ito-card {
+
+      background: white;
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 14px 45px rgba(0, 0, 0, .08);
+
+      border: 2px solid #d4a23a;
+
+      transition: .35s;
+
+      display: flex;
+
+      flex-direction: column;
+
+      height: 100%;
+
+    }
+
+    .ito-card:hover {
+
+      transform:
+        translateY(-8px);
+
+    }
+
+    .ito-image-wrap {
+
+      height: 520px;
+
+      overflow: hidden;
+
+      background: #fafafa;
+
+    }
+
+    .ito-image-wrap.portrait {
+
+      height: 520px;
+
+    }
+
+    .ito-image-wrap img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+    .ito-content {
+
+      background: #17396d;
+
+      padding: 22px;
+
+      display: flex;
+
+      gap: 16px;
+
+      align-items: flex-start;
+
+    }
+
+    .ito-icon {
+
+      font-size: 28px;
+
+      color: #f4c542;
+
+    }
+
+    .ito-content h4 {
+
+      color: white;
+
+      margin-bottom: 8px;
+
+      font-size: 20px;
+
+    }
+
+    .ito-content p {
+
+      color: #dbe6ff;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+    }
+
+    @media(max-width:900px) {
+
+      .ito-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .ito-image-wrap {
+
+        height: 420px;
+
+      }
+
+    }
+
     @media(max-width:1024px) {
       .classes-grid {
         grid-template-columns: repeat(2, 1fr)
@@ -2068,6 +2160,11 @@
       .hamburger {
         display: flex
       }
+
+      .ito-photo-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px
+      }
     }
 
     @media(max-width:600px) {
@@ -2104,15 +2201,13 @@
 
 <body>
 
-  <!-- ===================== MAIN PAGE ===================== -->
+  <!-- MAIN PAGE -->
   <div id="main-page" class="page active">
-
     <div class="topbar">
       <span>📍 दिनदयाल नगर, वार्ड नं. १२, आदर्श विद्यालयाजवळ, चिखली, जि. बुलढाणा</span>
       <span>|</span>
       <span>⏰ सोम-शनि: सकाळी ७ ते रात्री ९</span>
     </div>
-
     <nav id="navbar">
       <div class="nav-logo" onclick="showPage('main-page')">
         <div class="nav-logo-icon">🎓</div>
@@ -2127,38 +2222,28 @@
         <li><a onclick="showPage('main-page'); scrollToSection('#classes')">वर्ग</a></li>
         <li><a onclick="showPage('gallery-page')">गॅलरी</a></li>
         <li><a href="./result.html">निकाल</a></li>
-        
-
-        <li>
-          <a href="achievement.html">
-            विद्यार्थी उपलब्धी
-          </a>
+        <li><a href="achievement.html">विद्यार्थी उपलब्धी</a></li>
+        <li><a onclick="showPage('main-page'); scrollToSection('#contact')" class="nav-cta">संपर्क करा</a>
         </li>
-
-        <li><a onclick="showPage('main-page'); scrollToSection('#contact')" class="nav-cta">संपर्क करा</a></li>
       </ul>
       <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
     </nav>
-
     <div class="mobile-menu" id="mobileMenu">
       <button class="mobile-close" onclick="toggleMenu()">✕</button>
       <a onclick="showPage('main-page'); scrollToSection('#about'); toggleMenu()">आमच्याबद्दल</a>
       <a onclick="showPage('main-page'); scrollToSection('#teachers'); toggleMenu()">शिक्षक</a>
       <a onclick="showPage('main-page'); scrollToSection('#classes'); toggleMenu()">वर्ग</a>
       <a onclick="showPage('gallery-page'); toggleMenu()">गॅलरी</a>
-      <a href="./result.html" toggleMenu()">निकाल</a>
-      <a href="./achievement.html" onclick="toggleMenu()">
-        विद्यार्थी उपलब्धी
-      </a>
+      <a href="./result.html">निकाल</a>
+      <a href="./achievement.html" onclick="toggleMenu()">विद्यार्थी उपलब्धी</a>
       <a onclick="showPage('main-page'); scrollToSection('#contact'); toggleMenu()">संपर्क करा</a>
     </div>
-
     <div class="announcement">
-      <span class="announcement-inner">🎉 प्रवेश सुरू आहे! ◆ इयत्ता १ ली ते १० वी, ११ वी, १२ वी, B.Com, M.Com ◆ नवोदय ·
-        स्कॉलरशिप · भाभा · NEET · IIT पूर्व तयारी ◆ ITO उत्कृष्ट शिक्षक पुरस्कार विजेते ◆ २०१० पासून सेवेत ◆ आजच प्रवेश
-        घ्या!</span>
+      <span class="announcement-inner">🎉 प्रवेश सुरू आहे! ◆ इयत्ता १ ली ते १० वी, ११ वी, १२ वी, B.Com, M.Com ◆
+        नवोदय · स्कॉलरशिप · भाभा · NEET · IIT पूर्व तयारी ◆ ITO उत्कृष्ट शिक्षक पुरस्कार विजेते ◆ २०१० पासून
+        सेवेत ◆ आजच प्रवेश घ्या!</span>
     </div>
 
     <section class="hero">
@@ -2168,8 +2253,8 @@
         <div class="hero-left">
           <div class="hero-badge">🏆 ITO उत्कृष्ट शिक्षक पुरस्कार विजेते</div>
           <h1 class="hero-title">क्रिएटीव्ह<br><span class="highlight">एज्युकेशन</span><br>क्लासेस</h1>
-          <p class="hero-sub">विद्यार्थ्यांचा सर्वांगीण विकास घडवून त्यांना शैक्षणिकदृष्ट्या सक्षम, आत्मविश्वासू आणि
-            स्पर्धात्मक बनविणे हे आमचे ध्येय आहे.</p>
+          <p class="hero-sub">विद्यार्थ्यांचा सर्वांगीण विकास घडवून त्यांना शैक्षणिकदृष्ट्या सक्षम,
+            आत्मविश्वासू आणि स्पर्धात्मक बनविणे हे आमचे ध्येय आहे.</p>
           <div class="hero-stats">
             <div class="stat">
               <div class="stat-num">१०+</div>
@@ -2192,8 +2277,8 @@
         <div class="hero-right">
           <div class="award-banner">
             <div class="award-icon">🏆</div>
-            <div class="award-text"><strong>ITO उत्कृष्ट शिक्षक पुरस्कार</strong>सलग २ वर्ष — प्रा. रोहिणी कृष्णराव
-              देशमुख यांना</div>
+            <div class="award-text"><strong>ITO उत्कृष्ट शिक्षक पुरस्कार</strong>सलग २ वर्ष — प्रा. कृष्णराव
+              व प्रा. रोहिणी देशमुख यांना</div>
           </div>
           <div class="hero-card">
             <div class="hero-card-icon">🔬</div>
@@ -2234,18 +2319,18 @@
             </div>
             <div class="about-floating about-floating-1"><span class="float-num">५००+</span><small>विद्यार्थी
                 शिकले</small></div>
-            <div class="about-floating about-floating-2"><span class="float-num">२🏆</span><small>ITO पुरस्कार</small>
-            </div>
+            <div class="about-floating about-floating-2"><span class="float-num">२🏆</span><small>ITO
+                पुरस्कार</small></div>
           </div>
           <div class="about-text fade-up">
             <h2>आमच्याबद्दल</h2>
-            <p>क्रिएटीव्ह एज्युकेशन क्लासेस हे चिखली (जि. बुलढाणा) येथे २०१० पासून कार्यरत असलेले एक विश्वासार्ह शिकवणी
-              केंद्र आहे. ग्रामीण भागातील विद्यार्थ्यांना शहरी दर्जाचे शिक्षण मिळावे या उद्देशाने सुरू केलेले हे क्लासेस
-              आज परिसरातील एक आदर्श शैक्षणिक संस्था बनली आहे.</p>
-            <p>पालकांच्या आग्रहास्तव २०१० पासून सातत्याने सेवा देणारे अनुभवी शिक्षक, आधुनिक अध्यापन पद्धती व वैयक्तिक
-              लक्ष देऊन प्रत्येक विद्यार्थ्याला यशाच्या मार्गावर नेणे हे आमचे वचन आहे.</p>
-            <p>इयत्ता १ ली पासून १२ वी, B.Com, M.Com पर्यंत सर्व विषय — बाल संस्कार, स्कॉलरशिप, नवोदय, NEET, IIT — एकाच
-              छताखाली!</p>
+            <p>क्रिएटीव्ह एज्युकेशन क्लासेस हे चिखली (जि. बुलढाणा) येथे २०१० पासून कार्यरत असलेले एक
+              विश्वासार्ह शिकवणी केंद्र आहे. ग्रामीण भागातील विद्यार्थ्यांना शहरी दर्जाचे शिक्षण मिळावे या
+              उद्देशाने सुरू केलेले हे क्लासेस आज परिसरातील एक आदर्श शैक्षणिक संस्था बनली आहे.</p>
+            <p>पालकांच्या आग्रहास्तव २०१० पासून सातत्याने सेवा देणारे अनुभवी शिक्षक, आधुनिक अध्यापन पद्धती व
+              वैयक्तिक लक्ष देऊन प्रत्येक विद्यार्थ्याला यशाच्या मार्गावर नेणे हे आमचे वचन आहे.</p>
+            <p>इयत्ता १ ली पासून १२ वी, B.Com, M.Com पर्यंत सर्व विषय — बाल संस्कार, स्कॉलरशिप, नवोदय, NEET,
+              IIT — एकाच छताखाली!</p>
             <ul class="about-features">
               <li><span class="check">✓</span>अनुभवी व पुरस्कारप्राप्त शिक्षक वर्ग</li>
               <li><span class="check">✓</span>वैयक्तिक लक्ष व छोटे बॅच</li>
@@ -2271,9 +2356,7 @@
         <div class="teachers-grid-2 fade-up">
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div class="teacher-photo">
-                <img src="./assets/krushnasir.jpeg" alt="Krushnarao Sir">
-              </div>
+              <div class="teacher-photo"><img src="./assets/krushnasir.jpeg" alt="Krushnarao Sir"></div>
               <div>
                 <div class="teacher-name">प्रा. कृष्णराव प्रल्हादराव देशमुख</div>
                 <div class="teacher-role">संस्थापक संचालक</div>
@@ -2282,22 +2365,18 @@
             <div class="teacher-qual">
               <div class="teacher-qual-title">शैक्षणिक पात्रता</div>
               <div class="teacher-qual-list">
-                <span class="qual-tag">M.Com</span>
-                <span class="qual-tag">B.Sc</span>
-                <span class="qual-tag">D.El.Ed</span>
-                <span class="qual-tag">GDC&A</span>
-                <span class="qual-tag">SET Qualified</span>
+                <span class="qual-tag">M.Com</span><span class="qual-tag">B.Sc</span><span
+                  class="qual-tag">D.El.Ed</span><span class="qual-tag">GDC&amp;A</span><span class="qual-tag">SET
+                  Qualified</span>
               </div>
             </div>
-            <div class="teacher-info">विज्ञान (इ. ५वी ते १०वी), वाणिज्य (१२ वी, B.Com, M.Com) तसेच इ. १ली
-              ते ४थी सर्व विषय. नवोदय, स्कॉलरशिप व भाभा परीक्षा तज्ज्ञ.</div>
+            <div class="teacher-info">विज्ञान (इ. ५वी ते १०वी), वाणिज्य (१२ वी, B.Com, M.Com) तसेच इ. १ली ते
+              ४थी सर्व विषय. नवोदय, स्कॉलरशिप व भाभा परीक्षा तज्ज्ञ.</div>
             <div class="award-badge">🏆 ITO उत्कृष्ट शिक्षक पुरस्कार — सलग २ वर्षे</div>
           </div>
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div class="teacher-photo">
-                <img src="./assets/rohinimam.jpeg" alt="Rohini Madam">
-              </div>
+              <div class="teacher-photo"><img src="./assets/rohinimam.jpeg" alt="Rohini Madam"></div>
               <div>
                 <div class="teacher-name">प्रा. रोहिणी कृष्णराव देशमुख</div>
                 <div class="teacher-role">संचालिका व वरिष्ठ शिक्षिका</div>
@@ -2306,22 +2385,20 @@
             <div class="teacher-qual">
               <div class="teacher-qual-title">शैक्षणिक पात्रता</div>
               <div class="teacher-qual-list">
-                <span class="qual-tag">M.A.</span>
-                <span class="qual-tag">D.Ed</span>
-                <span class="qual-tag">SET Qualified</span>
+                <span class="qual-tag">M.A.</span><span class="qual-tag">D.Ed</span><span class="qual-tag">SET
+                  Qualified</span>
               </div>
             </div>
-            <div class="teacher-info">२०१० पासून पालकांच्या आग्रहास्तव सेवेत. बाल संस्कार वर्ग (वय ३ ते ६) विशेषज्ञ.
-              मराठी, हिंदी भाषा तज्ज्ञ.</div>
+            <div class="teacher-info">२०१० पासून पालकांच्या आग्रहास्तव सेवेत. बाल संस्कार वर्ग (वय ३ ते ६)
+              विशेषज्ञ. मराठी, हिंदी भाषा तज्ज्ञ.</div>
           </div>
         </div>
+
         <div class="teachers-section-title">🎓 अतिथी व्याख्याते (Guest Lecturers)</div>
         <div class="teachers-grid-3 fade-up">
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div class="teacher-photo guest">
-                <img src="./assets/anil.jpeg" alt="Anil Sir">
-              </div>
+              <div class="teacher-photo guest"><img src="./assets/anil.jpeg" alt="Anil Sir"></div>
               <div>
                 <div class="teacher-name-sm">अनिल उत्तम नरवाडे</div>
                 <div class="teacher-role">अतिथी व्याख्याते</div>
@@ -2329,18 +2406,14 @@
             </div>
             <div class="teacher-qual">
               <div class="teacher-qual-title">पात्रता</div>
-              <div class="teacher-qual-list">
-                <span class="qual-tag">M.A.</span><span class="qual-tag">B.Ed</span><span class="qual-tag">B.P.Ed</span>
-              </div>
+              <div class="teacher-qual-list"><span class="qual-tag">M.A.</span><span class="qual-tag">B.Ed</span><span
+                  class="qual-tag">B.P.Ed</span></div>
             </div>
             <div class="teacher-info">मराठी व इतिहास विषय तज्ज्ञ. उच्च माध्यमिक व पदवी स्तरावर अनुभव.</div>
-            <!-- <div class="photo-placeholder-note">* फोटो येथे जोडावा</div> -->
           </div>
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div class="teacher-photo guest">
-                <img src="./assets/komal.jpeg" alt="Komal Madam">
-              </div>
+              <div class="teacher-photo guest"><img src="./assets/komal.jpeg" alt="Komal Madam"></div>
               <div>
                 <div class="teacher-name-sm">कोमल अरुण गावंडे</div>
                 <div class="teacher-role">अतिथी व्याख्यात्या</div>
@@ -2348,19 +2421,15 @@
             </div>
             <div class="teacher-qual">
               <div class="teacher-qual-title">पात्रता</div>
-              <div class="teacher-qual-list">
-                <span class="qual-tag">M.Sc.</span><span class="qual-tag">Org. Chemistry</span><span
-                  class="qual-tag">B.Ed</span>
-              </div>
+              <div class="teacher-qual-list"><span class="qual-tag">M.Sc.</span><span class="qual-tag">Org.
+                  Chemistry</span><span class="qual-tag">B.Ed</span></div>
             </div>
-            <div class="teacher-info">सेंद्रिय रसायनशास्त्र तज्ज्ञ. इ. ९वी ते १२वी विज्ञान विशेष मार्गदर्शन.</div>
-            <!-- <div class="photo-placeholder-note">* फोटो येथे जोडावा</div> -->
+            <div class="teacher-info">सेंद्रिय रसायनशास्त्र तज्ज्ञ. इ. ९वी ते १२वी विज्ञान विशेष मार्गदर्शन.
+            </div>
           </div>
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div class="teacher-photo guest">
-                <img src="./assets/shyla.jpeg" alt="Shaila Madam">
-              </div>
+              <div class="teacher-photo guest"><img src="./assets/shyla.jpeg" alt="Shaila Madam"></div>
               <div>
                 <div class="teacher-name-sm">शैला शंकरराव धोटे</div>
                 <div class="teacher-role">अतिथी व्याख्यात्या</div>
@@ -2368,16 +2437,62 @@
             </div>
             <div class="teacher-qual">
               <div class="teacher-qual-title">पात्रता</div>
-              <div class="teacher-qual-list">
-                <span class="qual-tag">M.Sc.</span><span class="qual-tag">B.Ed</span>
+              <div class="teacher-qual-list"><span class="qual-tag">M.Sc.</span><span class="qual-tag">B.Ed</span></div>
+            </div>
+            <div class="teacher-info">विज्ञान विषय तज्ज्ञ. व्यावहारिक व संकल्पनात्मक शिक्षण पद्धतीत निपुण.
+            </div>
+          </div>
+
+          <!-- NEW: Jayshri Sapkal -->
+          <div class="teacher-card">
+            <div class="teacher-photo-wrap">
+              <div class="teacher-photo guest"
+                style="background:linear-gradient(135deg,#eef4ff,#dde8ff);border:3px dashed #9ab5e8;flex-direction:column;gap:4px;">
+                <span style="font-size:1.6rem;">👩&#8205;🏫</span>
+                <span
+                  style="font-size:0.58rem;color:#7a96c4;text-align:center;padding:0 4px;line-height:1.3;">फोटो<br>येथे
+                  जोडावा</span>
+              </div>
+              <div>
+                <div class="teacher-name-sm">जयश्री सपकाळ</div>
+                <div class="teacher-role">अतिथी व्याख्यात्या</div>
               </div>
             </div>
-            <div class="teacher-info">विज्ञान विषय तज्ज्ञ. व्यावहारिक व संकल्पनात्मक शिक्षण पद्धतीत निपुण.</div>
-            <!-- <div class="photo-placeholder-note">* फोटो येथे जोडावा</div> -->
+            <div class="teacher-qual">
+              <div class="teacher-qual-title">पात्रता</div>
+              <div class="teacher-qual-list"><span class="qual-tag">M.A.</span><span class="qual-tag">B.Ed</span></div>
+            </div>
+            <div class="teacher-info">भाषा व सामाजिक शास्त्र विषय तज्ज्ञ. माध्यमिक व उच्च माध्यमिक स्तरावर
+              अनुभव.</div>
+          </div>
+
+          <!-- NEW: Komal Deshmukh -->
+          <div class="teacher-card">
+            <div class="teacher-photo-wrap">
+              <div class="teacher-photo guest"
+                style="background:linear-gradient(135deg,#f0fdf4,#d6f5e3);border:3px dashed #7ed4a7;flex-direction:column;gap:4px;">
+                <span style="font-size:1.6rem;">👩&#8205;🏫</span>
+                <span
+                  style="font-size:0.58rem;color:#4aaa78;text-align:center;padding:0 4px;line-height:1.3;">फोटो<br>येथे
+                  जोडावा</span>
+              </div>
+              <div>
+                <div class="teacher-name-sm">कोमल देशमुख</div>
+                <div class="teacher-role">अतिथी व्याख्यात्या</div>
+              </div>
+            </div>
+            <div class="teacher-qual">
+              <div class="teacher-qual-title">पात्रता</div>
+              <div class="teacher-qual-list"><span class="qual-tag">M.Sc.</span><span
+                  class="qual-tag">Mathematics</span><span class="qual-tag">B.Ed</span></div>
+            </div>
+            <div class="teacher-info">गणित विषय तज्ज्ञ. इ. ५वी ते १२वी गणित विशेष मार्गदर्शन. संकल्पनात्मक
+              पद्धतीने शिकविण्यात निपुण.</div>
           </div>
         </div>
       </div>
     </section>
+
 
     <section id="classes">
       <div class="container">
@@ -2385,8 +2500,8 @@
           <div class="section-tag">अभ्यासक्रम</div>
           <h2 class="section-title">आमचे वर्ग व विषय</h2>
           <div class="section-divider"></div>
-          <p class="section-desc">इयत्ता १ ली ते M.Com पर्यंत सर्वसमावेशक शिक्षण — बालपणापासून पदव्युत्तर शिक्षणापर्यंत
-          </p>
+          <p class="section-desc">इयत्ता १ ली ते M.Com पर्यंत सर्वसमावेशक शिक्षण — बालपणापासून पदव्युत्तर
+            शिक्षणापर्यंत</p>
         </div>
         <div class="classes-grid fade-up">
           <div class="class-card">
@@ -2474,8 +2589,8 @@
               </tr>
               <tr>
                 <td><strong>B.Com</strong></td>
-                <td><span class="badge-sub">Financial Acc.</span><span class="badge-sub">Cost Acc.</span><span
-                    class="badge-sub">Economics</span><span class="badge-sub">Business Law</span></td>
+                <td><span class="badge-sub">Financial Acc.</span><span class="badge-sub">Cost
+                    Acc.</span><span class="badge-sub">Economics</span><span class="badge-sub">Business Law</span></td>
                 <td>पदवी अभ्यासक्रम</td>
               </tr>
               <tr>
@@ -2502,6 +2617,7 @@
       </div>
     </section>
 
+
     <section id="achievements">
       <div class="container">
         <div class="section-header fade-up">
@@ -2513,8 +2629,9 @@
         <div class="achievements-grid fade-up">
           <div class="achievement-card"><span class="ach-icon">🏆</span>
             <div class="ach-title">ITO उत्कृष्ट शिक्षक पुरस्कार</div>
-            <div class="ach-desc">Indian Talent Olympiad तर्फे प्रा. रोहिणी देशमुख यांना सलग २ वर्षे पुरस्कार.</div>
-            <span class="ach-year">सलग २ वर्षे</span>
+            <div class="ach-desc">Indian Talent Olympiad तर्फे प्रा. कृष्णराव देशमुख यांना सलग २ वर्षे
+              पुरस्कार — Dr. Kiran Bedi &amp; Ms. Saina Nehwal यांच्या हस्ते.</div><span class="ach-year">सलग २
+              वर्षे</span>
           </div>
           <div class="achievement-card"><span class="ach-icon">🎓</span>
             <div class="ach-title">नवोदय यशस्वी विद्यार्थी</div>
@@ -2528,8 +2645,8 @@
           </div>
           <div class="achievement-card"><span class="ach-icon">🔬</span>
             <div class="ach-title">भाभा व बाल वैज्ञानिक</div>
-            <div class="ach-desc">भाभा रिसर्च सेंटर व बाल वैज्ञानिक परीक्षेत विद्यार्थ्यांचे घवघवीत यश.</div><span
-              class="ach-year">अनेक विद्यार्थी</span>
+            <div class="ach-desc">भाभा रिसर्च सेंटर व बाल वैज्ञानिक परीक्षेत विद्यार्थ्यांचे घवघवीत यश.
+            </div><span class="ach-year">अनेक विद्यार्थी</span>
           </div>
           <div class="achievement-card"><span class="ach-icon">📈</span>
             <div class="ach-title">SET परीक्षा पात्रता</div>
@@ -2538,13 +2655,99 @@
           </div>
           <div class="achievement-card"><span class="ach-icon">💡</span>
             <div class="ach-title">१०+ वर्षांचा अनुभव</div>
-            <div class="ach-desc">२०१० पासून सातत्याने विद्यार्थ्यांच्या शैक्षणिक विकासासाठी कार्यरत.</div><span
-              class="ach-year">२०१० पासून</span>
+            <div class="ach-desc">२०१० पासून सातत्याने विद्यार्थ्यांच्या शैक्षणिक विकासासाठी कार्यरत.</div>
+            <span class="ach-year">२०१० पासून</span>
           </div>
+        </div>
+
+        <!-- ITO Award Photos -->
+        <div class="ito-award-photos fade-up">
+
+          <div class="ito-header">
+            <span class="ito-tag">
+              🏆 ITO Excellence Awards
+            </span>
+
+            <h3>
+              ITO Best Teacher Award 2025-26
+            </h3>
+
+            <p>
+              Honoured by Dr. Kiran Bedi & Ms. Saina Nehwal
+            </p>
+          </div>
+
+          <div class="ito-grid">
+
+            <!-- Card 1 -->
+            <div class="ito-card">
+
+              <div class="ito-image-wrap">
+                <img src="/assets/award1.jpeg" alt="Award Ceremony">
+              </div>
+
+              <div class="ito-content">
+
+                <div class="ito-icon">
+                  🏆
+                </div>
+
+                <div>
+
+                  <h4>
+                    ITO Best Teacher Award 2025-26
+                  </h4>
+
+                  <p>
+                    Dr. Kiran Bedi &
+                    Ms. Saina Nehwal
+                    यांच्या हस्ते सन्मान
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="ito-card">
+
+              <div class="ito-image-wrap portrait">
+
+                <img src="assets/award2.jpeg" alt="ITO Award">
+
+              </div>
+
+              <div class="ito-content">
+
+                <div class="ito-icon">
+                  🌟
+                </div>
+
+                <div>
+
+                  <h4>
+                    Excellence Awards Ceremony
+                  </h4>
+
+                  <p>
+                    Indian Talent Olympiad
+                    | MH2609
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
-
     <section id="vision">
       <div class="container">
         <div class="section-header fade-up">
@@ -2556,7 +2759,8 @@
         <div class="vision-grid fade-up">
           <div class="vision-item">
             <div class="vision-num">१</div>
-            <div class="vision-text">इयत्ता ५ वी ते M.Com च्या विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षण प्रदान करणे.</div>
+            <div class="vision-text">इयत्ता ५ वी ते M.Com च्या विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षण प्रदान
+              करणे.</div>
           </div>
           <div class="vision-item">
             <div class="vision-num">२</div>
@@ -2564,7 +2768,8 @@
           </div>
           <div class="vision-item">
             <div class="vision-num">३</div>
-            <div class="vision-text">विद्यार्थ्यांचा पाया मजबूत करून स्पर्धा परीक्षा व उच्च शिक्षणासाठी तयार करणे.</div>
+            <div class="vision-text">विद्यार्थ्यांचा पाया मजबूत करून स्पर्धा परीक्षा व उच्च शिक्षणासाठी तयार
+              करणे.</div>
           </div>
           <div class="vision-item">
             <div class="vision-num">४</div>
@@ -2572,29 +2777,33 @@
           </div>
           <div class="vision-item">
             <div class="vision-num">५</div>
-            <div class="vision-text">आधुनिक अध्यापन पद्धती व तंत्रज्ञानाचा वापर करून प्रभावी शिक्षण देणे.</div>
-          </div>
-          <div class="vision-item">
-            <div class="vision-num">६</div>
-            <div class="vision-text">विद्यार्थ्यांमध्ये आत्मविश्वास, शिस्त, वेळेचे नियोजन व सकारात्मक विचार विकसित करणे.
+            <div class="vision-text">आधुनिक अध्यापन पद्धती व तंत्रज्ञानाचा वापर करून प्रभावी शिक्षण देणे.
             </div>
           </div>
           <div class="vision-item">
+            <div class="vision-num">६</div>
+            <div class="vision-text">विद्यार्थ्यांमध्ये आत्मविश्वास, शिस्त, वेळेचे नियोजन व सकारात्मक विचार
+              विकसित करणे.</div>
+          </div>
+          <div class="vision-item">
             <div class="vision-num">७</div>
-            <div class="vision-text">पालक आणि शिक्षक यांच्यात समन्वय साधून विद्यार्थ्यांचा शैक्षणिक विकास घडविणे.</div>
+            <div class="vision-text">पालक आणि शिक्षक यांच्यात समन्वय साधून विद्यार्थ्यांचा शैक्षणिक विकास
+              घडविणे.</div>
           </div>
           <div class="vision-item">
             <div class="vision-num">८</div>
-            <div class="vision-text">ग्रामीण भागातील विद्यार्थ्यांना उच्च दर्जाचे शिक्षण उपलब्ध करून देणे.</div>
+            <div class="vision-text">ग्रामीण भागातील विद्यार्थ्यांना उच्च दर्जाचे शिक्षण उपलब्ध करून देणे.
+            </div>
           </div>
           <div class="vision-item">
             <div class="vision-num">९</div>
-            <div class="vision-text">विद्यार्थ्यांना IIT, NEET, Engineering आणि इतर करिअर क्षेत्रांची प्राथमिक ओळख करून
-              देणे.</div>
+            <div class="vision-text">विद्यार्थ्यांना IIT, NEET, Engineering आणि इतर करिअर क्षेत्रांची
+              प्राथमिक ओळख करून देणे.</div>
           </div>
           <div class="vision-item">
             <div class="vision-num">१०</div>
-            <div class="vision-text">"ज्ञान, गुणवत्ता आणि संस्कार" या तत्त्वांवर आधारित आदर्श विद्यार्थी घडविणे.</div>
+            <div class="vision-text">"ज्ञान, गुणवत्ता आणि संस्कार" या तत्त्वांवर आधारित आदर्श विद्यार्थी
+              घडविणे.</div>
           </div>
         </div>
       </div>
@@ -2614,8 +2823,8 @@
               <div class="contact-icon">📍</div>
               <div>
                 <div class="contact-item-title">पत्ता</div>
-                <div class="contact-item-val">दिनदयाल नगर, वार्ड नं. १२,<br>आदर्श विद्यालयाजवळ,<br>चिखली, जि. बुलढाणा
-                </div>
+                <div class="contact-item-val">दिनदयाल नगर, वार्ड नं. १२,<br>आदर्श
+                  विद्यालयाजवळ,<br>चिखली, जि. बुलढाणा</div>
               </div>
             </div>
             <div class="contact-item">
@@ -2629,142 +2838,50 @@
               <div class="contact-icon">📚</div>
               <div>
                 <div class="contact-item-title">उपलब्ध अभ्यासक्रम</div>
-                <div class="contact-item-val">बाल संस्कार · इ. १ ते १२ वी<br>B.Com · M.Com<br>स्कॉलरशिप · नवोदय · भाभा
-                </div>
+                <div class="contact-item-val">बाल संस्कार · इ. १ ते १२ वी<br>B.Com · M.Com<br>स्कॉलरशिप
+                  · नवोदय · भाभा</div>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">🏆</div>
               <div>
                 <div class="contact-item-title">विशेष</div>
-                <div class="contact-item-val">ITO पुरस्कार विजेते शिक्षक<br>SET पात्र संचालक<br>२०१० पासून अनुभवी</div>
+                <div class="contact-item-val">ITO पुरस्कार विजेते शिक्षक<br>SET पात्र संचालक<br>२०१०
+                  पासून अनुभवी</div>
               </div>
             </div>
           </div>
           <form class="contact-form fade-up" action="https://formspree.io/f/xredglbq" method="POST">
-
             <h3>📝 प्रवेश अर्ज करा</h3>
-
             <input type="hidden" name="_subject" value="नवीन प्रवेश अर्ज">
-
-            <div class="form-group">
-
-              <label>
-                विद्यार्थ्याचे पूर्ण नाव *
-              </label>
-
-              <input type="text" name="student_name" placeholder="विद्यार्थ्याचे नाव" required>
-
-            </div>
-
-            <div class="form-group">
-
-              <label>
-                पालकांचे नाव *
-              </label>
-
-              <input type="text" name="parent_name" placeholder="पालकांचे नाव" required>
-
-            </div>
-
-            <div class="form-group">
-
-              <label>
-                भ्रमणध्वनी क्रमांक *
-              </label>
-
-              <input type="tel" name="mobile" placeholder="मोबाइल नंबर" required>
-
-            </div>
-
-            <div class="form-group">
-
-              <label>
-                इयत्ता / वर्ग *
-              </label>
-
+            <div class="form-group"><label>विद्यार्थ्याचे पूर्ण नाव *</label><input type="text" name="student_name"
+                placeholder="विद्यार्थ्याचे नाव" required></div>
+            <div class="form-group"><label>पालकांचे नाव *</label><input type="text" name="parent_name"
+                placeholder="पालकांचे नाव" required></div>
+            <div class="form-group"><label>भ्रमणध्वनी क्रमांक *</label><input type="tel" name="mobile"
+                placeholder="मोबाइल नंबर" required></div>
+            <div class="form-group"><label>इयत्ता / वर्ग *</label>
               <select name="class" required>
-
-                <option value="">
-                  इयत्ता निवडा
-                </option>
-
-                <option>
-                  बाल संस्कार वर्ग (वय ३-६)
-                </option>
-
-                <option>
-                  इयत्ता १ ली ते ४ थी
-                </option>
-
-                <option>
-                  इयत्ता ५ वी ते ७ वी
-                </option>
-
-                <option>
-                  इयत्ता ८ वी ते १० वी
-                </option>
-
-                <option>
-                  ११ वी विज्ञान
-                </option>
-
-                <option>
-                  १२ वी विज्ञान
-                </option>
-
-                <option>
-                  ११ वी वाणिज्य
-                </option>
-
-                <option>
-                  १२ वी वाणिज्य
-                </option>
-
-                <option>
-                  B.Com
-                </option>
-
-                <option>
-                  M.Com
-                </option>
-
-                <option>
-                  स्कॉलरशिप (४ थी)
-                </option>
-
-                <option>
-                  स्कॉलरशिप (७ वी)
-                </option>
-
-                <option>
-                  नवोदय परीक्षा
-                </option>
-
-                <option>
-                  भाभा / बाल वैज्ञानिक
-                </option>
-
+                <option value="">इयत्ता निवडा</option>
+                <option>बाल संस्कार वर्ग (वय ३-६)</option>
+                <option>इयत्ता १ ली ते ४ थी</option>
+                <option>इयत्ता ५ वी ते ७ वी</option>
+                <option>इयत्ता ८ वी ते १० वी</option>
+                <option>११ वी विज्ञान</option>
+                <option>१२ वी विज्ञान</option>
+                <option>११ वी वाणिज्य</option>
+                <option>१२ वी वाणिज्य</option>
+                <option>B.Com</option>
+                <option>M.Com</option>
+                <option>स्कॉलरशिप (४ थी)</option>
+                <option>स्कॉलरशिप (७ वी)</option>
+                <option>नवोदय परीक्षा</option>
+                <option>भाभा / बाल वैज्ञानिक</option>
               </select>
-
             </div>
-
-            <div class="form-group">
-
-              <label>
-                संदेश (पर्यायी)
-              </label>
-
-              <textarea name="message" placeholder="कोणताही प्रश्न येथे लिहा..."></textarea>
-
-            </div>
-
-            <button type="submit" class="form-submit">
-
-              📨 अर्ज पाठवा
-
-            </button>
-
+            <div class="form-group"><label>संदेश (पर्यायी)</label><textarea name="message"
+                placeholder="कोणताही प्रश्न येथे लिहा..."></textarea></div>
+            <button type="submit" class="form-submit">📨 अर्ज पाठवा</button>
           </form>
         </div>
       </div>
@@ -2775,8 +2892,8 @@
         <div class="map-placeholder">
           <div class="map-pin">📍</div>
           <div class="map-addr">क्रिएटीव्ह एज्युकेशन क्लासेस, चिखली</div>
-          <p style="margin-top:5px;font-size:0.82rem;color:#5a6075;font-family:'Hind',sans-serif;">दिनदयाल नगर, वार्ड
-            नं. १२, आदर्श विद्यालयाजवळ, चिखली, जि. बुलढाणा</p>
+          <p style="margin-top:5px;font-size:0.82rem;color:#5a6075;font-family:'Hind',sans-serif;">दिनदयाल
+            नगर, वार्ड नं. १२, आदर्श विद्यालयाजवळ, चिखली, जि. बुलढाणा</p>
         </div>
       </div>
     </div>
@@ -2786,8 +2903,8 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="brand-name">🎓 क्रिएटीव्ह एज्युकेशन क्लासेस</div>
-            <p>ज्ञान, गुणवत्ता आणि संस्कार या तत्त्वांवर आधारित, ग्रामीण विद्यार्थ्यांना उच्च दर्जाचे शिक्षण देण्यासाठी
-              २०१० पासून समर्पित.</p>
+            <p>ज्ञान, गुणवत्ता आणि संस्कार या तत्त्वांवर आधारित, ग्रामीण विद्यार्थ्यांना उच्च दर्जाचे शिक्षण
+              देण्यासाठी २०१० पासून समर्पित.</p>
             <div class="footer-social">
               <div class="social-btn">📘</div>
               <div class="social-btn">💬</div>
@@ -2798,11 +2915,12 @@
             <h4>त्वरित दुवे</h4>
             <ul>
               <li><a onclick="showPage('main-page'); scrollToSection('#about')">आमच्याबद्दल</a></li>
-              <li><a onclick="showPage('main-page'); scrollToSection('#teachers')">शिक्षक परिचय</a></li>
+              <li><a onclick="showPage('main-page'); scrollToSection('#teachers')">शिक्षक परिचय</a>
+              </li>
               <li><a onclick="showPage('main-page'); scrollToSection('#classes')">वर्ग व विषय</a></li>
               <li><a onclick="showPage('gallery-page')">गॅलरी</a></li>
-              <li><a onclick="showPage('result-page')">निकाल</a></li>
-              <li><a onclick="showPage('achievement-page')">विद्यार्थी उपलब्धी</a></li>
+              <li><a href="./result.html">निकाल</a></li>
+              <li><a href="./achievement.html">विद्यार्थी उपलब्धी</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -2824,8 +2942,7 @@
     </footer>
   </div><!-- end main-page -->
 
-
-  <!-- ===================== GALLERY PAGE ===================== -->
+  <!-- GALLERY PAGE -->
   <div id="gallery-page" class="page inner-page">
     <nav class="inner-nav">
       <div class="nav-logo" onclick="showPage('main-page')">
@@ -2837,8 +2954,8 @@
       </div>
       <ul class="nav-links">
         <li><a onclick="showPage('main-page')">🏠 मुख्यपृष्ठ</a></li>
-        <li><a onclick="showPage('result-page')">निकाल</a></li>
-        <li><a onclick="showPage('achievement-page')">विद्यार्थी उपलब्धी</a></li>
+        <li><a href="./result.html">निकाल</a></li>
+        <li><a href="./achievement.html">विद्यार्थी उपलब्धी</a></li>
         <li><a onclick="showPage('main-page'); scrollToSection('#contact')" class="nav-cta">संपर्क</a></li>
       </ul>
     </nav>
@@ -2918,8 +3035,8 @@
         </div>
       </div>
       <div class="gallery-upload-note">
-        <p>📸 <strong>फोटो अपलोड करण्यासाठी:</strong> आपले वास्तविक फोटो येथे जोडण्यासाठी वेबसाइट संचालकाशी संपर्क करा.
-          वरील ठिकाणे फोटोसाठी आरक्षित आहेत.</p>
+        <p>📸 <strong>फोटो अपलोड करण्यासाठी:</strong> आपले वास्तविक फोटो येथे जोडण्यासाठी वेबसाइट संचालकाशी
+          संपर्क करा. वरील ठिकाणे फोटोसाठी आरक्षित आहेत.</p>
       </div>
     </div>
     <footer
@@ -2927,333 +3044,240 @@
       © २०२५ क्रिएटीव्ह एज्युकेशन क्लासेस, चिखली &nbsp;|&nbsp; <span onclick="showPage('main-page')"
         style="cursor:pointer;color:var(--accent2);">मुख्यपृष्ठ</span>
     </footer>
-  </div><!-- end gallery-page -->
-
-
-  <!-- ===================== RESULT PAGE ===================== -->
-  <div id="result-page" class="page inner-page">
-    <nav class="inner-nav">
-      <div class="nav-logo" onclick="showPage('main-page')">
-        <div class="nav-logo-icon">🎓</div>
-        <div class="nav-logo-text">
-          <div class="brand">क्रिएटीव्ह एज्युकेशन क्लासेस</div>
-          <div class="sub">चिखली, जि. बुलढाणा</div>
-        </div>
-      </div>
-      <ul class="nav-links">
-        <li><a onclick="showPage('main-page')">🏠 मुख्यपृष्ठ</a></li>
-        <li><a onclick="showPage('gallery-page')">गॅलरी</a></li>
-        <li><a onclick="showPage('achievement-page')">विद्यार्थी उपलब्धी</a></li>
-        <li><a onclick="showPage('main-page'); scrollToSection('#contact')" class="nav-cta">संपर्क</a></li>
-      </ul>
-    </nav>
-    <div class="inner-hero">
-      <button class="back-btn" onclick="showPage('main-page')">← मुख्यपृष्ठावर परत</button>
-      <h1>📊 निकाल</h1>
-      <p>आमच्या विद्यार्थ्यांचे शानदार परीक्षा निकाल</p>
-    </div>
-    <div class="result-page-content container">
-      <div class="result-summary">
-        <div class="result-stat-card">
-          <div class="rs-num">१००%</div>
-          <div class="rs-label">उत्तीर्ण दर (दरवर्षी)</div>
-        </div>
-        <div class="result-stat-card">
-          <div class="rs-num">५०+</div>
-          <div class="rs-label">नवोदय यशस्वी</div>
-        </div>
-        <div class="result-stat-card">
-          <div class="rs-num">२०+</div>
-          <div class="rs-label">स्कॉलरशिप विजेते</div>
-        </div>
-        <div class="result-stat-card">
-          <div class="rs-num">१०+</div>
-          <div class="rs-label">वर्षे उत्कृष्ट निकाल</div>
-        </div>
-      </div>
-
-      <div class="result-year-section">
-        <div class="result-year-title">🏆 नवोदय परीक्षा निकाल</div>
-        <table class="result-table">
-          <thead>
-            <tr>
-              <th>क्र.</th>
-              <th>विद्यार्थ्याचे नाव</th>
-              <th>इयत्ता</th>
-              <th>वर्ष</th>
-              <th>यश</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>१</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>इ. ६वी</td>
-              <td>२०२४</td>
-              <td><span class="rank-badge rank-1">🏆 प्रवेश मिळवला</span></td>
-            </tr>
-            <tr>
-              <td>२</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>इ. ६वी</td>
-              <td>२०२३</td>
-              <td><span class="rank-badge rank-1">🏆 प्रवेश मिळवला</span></td>
-            </tr>
-            <tr>
-              <td>३</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>इ. ६वी</td>
-              <td>२०२३</td>
-              <td><span class="rank-badge rank-2">✅ उत्तीर्ण</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="result-year-section">
-        <div class="result-year-title">⭐ स्कॉलरशिप परीक्षा निकाल</div>
-        <table class="result-table">
-          <thead>
-            <tr>
-              <th>क्र.</th>
-              <th>विद्यार्थ्याचे नाव</th>
-              <th>इयत्ता</th>
-              <th>वर्ष</th>
-              <th>गुण / श्रेणी</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>१</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>४थी</td>
-              <td>२०२४</td>
-              <td><span class="rank-badge rank-1">🥇 प्रथम श्रेणी</span></td>
-            </tr>
-            <tr>
-              <td>२</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>७वी</td>
-              <td>२०२४</td>
-              <td><span class="rank-badge rank-1">🥇 प्रथम श्रेणी</span></td>
-            </tr>
-            <tr>
-              <td>३</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>४थी</td>
-              <td>२०२३</td>
-              <td><span class="rank-badge rank-2">🥈 द्वितीय श्रेणी</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="result-year-section">
-        <div class="result-year-title">🔬 भाभा / बाल वैज्ञानिक निकाल</div>
-        <table class="result-table">
-          <thead>
-            <tr>
-              <th>क्र.</th>
-              <th>विद्यार्थ्याचे नाव</th>
-              <th>परीक्षा</th>
-              <th>वर्ष</th>
-              <th>निकाल</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>१</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>भाभा</td>
-              <td>२०२४</td>
-              <td><span class="rank-badge rank-1">✅ यशस्वी</span></td>
-            </tr>
-            <tr>
-              <td>२</td>
-              <td>— (नाव येथे जोडा)</td>
-              <td>बाल वैज्ञानिक</td>
-              <td>२०२३</td>
-              <td><span class="rank-badge rank-1">✅ यशस्वी</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="result-add-note">
-        <p>📋 <strong>निकाल अद्यतन करण्यासाठी:</strong> विद्यार्थ्यांचे नाव, वर्ष व निकाल वेबसाइट संचालकाकडे द्या. हे
-          तक्ते अद्यतनित केले जातील.</p>
-      </div>
-    </div>
-    <footer
-      style="background:var(--primary);color:rgba(255,255,255,0.8);padding:22px 4%;text-align:center;font-family:'Hind',sans-serif;font-size:0.82rem;">
-      © २०२५ क्रिएटीव्ह एज्युकेशन क्लासेस, चिखली &nbsp;|&nbsp; <span onclick="showPage('main-page')"
-        style="cursor:pointer;color:var(--accent2);">मुख्यपृष्ठ</span>
-    </footer>
-  </div><!-- end result-page -->
-
-
-  <!-- ===================== ACHIEVEMENT PAGE ===================== -->
-  <div id="achievement-page" class="page inner-page">
-    <nav class="inner-nav">
-      <div class="nav-logo" onclick="showPage('main-page')">
-        <div class="nav-logo-icon">🎓</div>
-        <div class="nav-logo-text">
-          <div class="brand">क्रिएटीव्ह एज्युकेशन क्लासेस</div>
-          <div class="sub">चिखली, जि. बुलढाणा</div>
-        </div>
-      </div>
-      <ul class="nav-links">
-        <li><a onclick="showPage('main-page')">🏠 मुख्यपृष्ठ</a></li>
-        <li><a onclick="showPage('gallery-page')">गॅलरी</a></li>
-        <li><a onclick="showPage('result-page')">निकाल</a></li>
-        <li><a onclick="showPage('main-page'); scrollToSection('#contact')" class="nav-cta">संपर्क</a></li>
-      </ul>
-    </nav>
-    <div class="inner-hero">
-      <button class="back-btn" onclick="showPage('main-page')">← मुख्यपृष्ठावर परत</button>
-      <h1>🌟 विद्यार्थी उपलब्धी</h1>
-      <p>आमच्या गुणवंत विद्यार्थ्यांचे गौरवशाली यश</p>
-    </div>
-    <div class="achievement-page-content container">
-
-      <div class="trophy-wall">
-        <h3>🏆 गौरव भिंत</h3>
-        <p>क्रिएटीव्ह एज्युकेशन क्लासेसचे गर्वाचे क्षण</p>
-        <div class="trophy-icons">
-          <div class="trophy-item"><span class="ti-icon">🏆</span>
-            <div class="ti-label">ITO पुरस्कार<br>सलग २ वर्षे</div>
-          </div>
-          <div class="trophy-item"><span class="ti-icon">🎓</span>
-            <div class="ti-label">नवोदय<br>५०+ विद्यार्थी</div>
-          </div>
-          <div class="trophy-item"><span class="ti-icon">⭐</span>
-            <div class="ti-label">स्कॉलरशिप<br>दरवर्षी यश</div>
-          </div>
-          <div class="trophy-item"><span class="ti-icon">🔬</span>
-            <div class="ti-label">भाभा / बाल<br>वैज्ञानिक</div>
-          </div>
-          <div class="trophy-item"><span class="ti-icon">💡</span>
-            <div class="ti-label">१०+ वर्षे<br>उत्कृष्ट सेवा</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="student-achiev-grid">
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">🎓</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ६वी | वर्ष २०२४</div>
-          <div class="student-achiev-badge">🏆 नवोदय प्रवेश</div>
-        </div>
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">⭐</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ४थी | वर्ष २०२४</div>
-          <div class="student-achiev-badge">🥇 स्कॉलरशिप प्रथम</div>
-        </div>
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">🔬</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ८वी | वर्ष २०२४</div>
-          <div class="student-achiev-badge">✅ भाभा यशस्वी</div>
-        </div>
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">🎓</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ६वी | वर्ष २०२३</div>
-          <div class="student-achiev-badge">🏆 नवोदय प्रवेश</div>
-        </div>
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">⭐</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ७वी | वर्ष २०२३</div>
-          <div class="student-achiev-badge">🥇 स्कॉलरशिप प्रथम</div>
-        </div>
-        <div class="student-achiev-card">
-          <div class="student-photo-circle">🌟</div>
-          <div class="student-name">— (नाव येथे जोडा)</div>
-          <div class="student-class">इयत्ता ९वी | वर्ष २०२३</div>
-          <div class="student-achiev-badge">✅ बाल वैज्ञानिक</div>
-        </div>
-      </div>
-
-      <div class="achiev-add-note">
-        <p>🌟 <strong>विद्यार्थ्यांचे नाव व फोटो जोडण्यासाठी:</strong> यशस्वी विद्यार्थ्यांची माहिती व फोटो वेबसाइट
-          संचालकाकडे द्या. ही विद्यार्थी उपलब्धी भिंत अद्यतनित केली जाईल.</p>
-      </div>
-    </div>
-    <footer
-      style="background:var(--primary);color:rgba(255,255,255,0.8);padding:22px 4%;text-align:center;font-family:'Hind',sans-serif;font-size:0.82rem;">
-      © २०२५ क्रिएटीव्ह एज्युकेशन क्लासेस, चिखली &nbsp;|&nbsp; <span onclick="showPage('main-page')"
-        style="cursor:pointer;color:var(--accent2);">मुख्यपृष्ठ</span>
-    </footer>
-  </div><!-- end achievement-page -->
+  </div>
 
 
   <script>
-    // ── PAGE NAVIGATION ──────────────────────────────────────
+
     function showPage(id) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      setTimeout(() => {
-        document.querySelectorAll('#' + id + ' .fade-up').forEach(el => {
-          el.classList.remove('visible');
-          setTimeout(() => el.classList.add('visible'), 100);
+
+      const pages = document.querySelectorAll(".page");
+
+      pages.forEach(function (page) {
+        page.classList.remove("active");
+      });
+
+      const target = document.getElementById(id);
+
+      if (target) {
+        target.classList.add("active");
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: "auto"
+      });
+
+      setTimeout(function () {
+
+        const items =
+          document.querySelectorAll(
+            "#" + id + " .fade-up"
+          );
+
+        items.forEach(function (el) {
+
+          el.classList.remove(
+            "visible"
+          );
+
+          setTimeout(function () {
+
+            el.classList.add(
+              "visible"
+            );
+
+          }, 100);
+
         });
+
       }, 50);
+
     }
 
-    // ── SCROLL TO SECTION ─────────────────────────────────────
-    // Renamed from scrollTo() to avoid conflict with native window.scrollTo()
+
+
     function scrollToSection(selector) {
-      setTimeout(() => {
-        const el = document.querySelector(selector);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      setTimeout(function () {
+
+        const el =
+          document.querySelector(
+            selector
+          );
+
+        if (el) {
+
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+
       }, 120);
+
     }
 
-    // ── MOBILE MENU ───────────────────────────────────────────
+
+
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('active');
+
+      const menu =
+        document.getElementById(
+          "mobileMenu"
+        );
+
+      if (menu) {
+
+        menu.classList.toggle(
+          "active"
+        );
+
+      }
+
     }
 
-    // ── FADE-UP OBSERVER ──────────────────────────────────────
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.10 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // ── GALLERY FILTER ────────────────────────────────────────
+
     function filterGallery(cat, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'flex' : 'none';
+
+      const buttons =
+        document.querySelectorAll(
+          ".filter-btn"
+        );
+
+      buttons.forEach(function (b) {
+
+        b.classList.remove(
+          "active"
+        );
+
       });
+
+      if (btn) {
+
+        btn.classList.add(
+          "active"
+        );
+
+      }
+
+      const items =
+        document.querySelectorAll(
+          ".gallery-item"
+        );
+
+      items.forEach(function (item) {
+
+        if (
+          cat === "all" ||
+          item.dataset.cat === cat
+        ) {
+
+          item.style.display =
+            "flex";
+
+        }
+
+        else {
+
+          item.style.display =
+            "none";
+
+        }
+
+      });
+
     }
 
-    // ── FORM SUBMIT ───────────────────────────────────────────
-    function submitForm() {
-      const btn = document.querySelector('.form-submit');
-      btn.textContent = '✅ अर्ज यशस्वीरित्या पाठवला!';
-      btn.style.background = '#16a34a';
-      setTimeout(() => {
-        btn.textContent = '📨 अर्ज पाठवा';
-        btn.style.background = '';
-      }, 3500);
-    }
 
-    // ── NAVBAR SCROLL SHADOW ──────────────────────────────────
-    window.addEventListener('scroll', () => {
-      document.querySelectorAll('nav').forEach(nav => {
-        nav.style.boxShadow = window.scrollY > 20
-          ? '0 4px 24px rgba(26,58,107,0.14)'
-          : '0 2px 16px rgba(26,58,107,0.08)';
-      });
-    });
+
+    const observer =
+      new IntersectionObserver(
+
+        function (entries) {
+
+          entries.forEach(
+            function (entry) {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList.add(
+                    "visible"
+                  );
+
+              }
+
+            });
+
+        },
+
+        {
+          threshold: 0.1
+        }
+
+      );
+
+
+
+    document.addEventListener(
+      "DOMContentLoaded",
+
+      function () {
+
+        document
+          .querySelectorAll(
+            ".fade-up"
+          )
+
+          .forEach(function (el) {
+
+            observer.observe(el);
+
+          });
+
+      }
+
+    );
+
+
+
+    window.addEventListener(
+      "scroll",
+
+      function () {
+
+        document
+          .querySelectorAll("nav")
+
+          .forEach(function (nav) {
+
+            if (
+              window.scrollY > 20
+            ) {
+
+              nav.style.boxShadow =
+                "0 4px 24px rgba(26,58,107,0.14)";
+
+            }
+
+            else {
+
+              nav.style.boxShadow =
+                "0 2px 16px rgba(26,58,107,0.08)";
+
+            }
+
+          });
+
+      }
+
+    );
+
   </script>
 </body>
 
